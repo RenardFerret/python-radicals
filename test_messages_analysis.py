@@ -1,5 +1,5 @@
 import pytest
-from structure import urlForumBoard
+from messages_analysis import urlForumBoard
 
 class TestForumBoard:
 	def setup_method(self):
