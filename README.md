@@ -1,4 +1,4 @@
-# python-radicals
+# messages_analysis
 This small function allows the user to extract the messages from a forum board (here from jeuxvideo.com, although other sites may be implemented in the future) or any list of strings contained in a JSON file, and reduce each word from each message to its radical. The resulting corrected messages are returned in a JSON file.
 
 The current routine is optimized for the *french language*, others may be added in the future. 
