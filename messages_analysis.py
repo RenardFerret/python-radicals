@@ -1,6 +1,5 @@
 import json
 import requests
-import json
 import lxml
 import unicodedata
 from bs4 import BeautifulSoup
