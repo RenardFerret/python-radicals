@@ -9,7 +9,7 @@ __writeFile__ : this function takes a list of strings and writes them as a list 
 
 __readJson__ : a simple function that extracts strings from a JSON file containing a list of strings.
 
-__loadDictionary__ : this function opens and parses a dictionary located at a path defined by the user. The default dictionary is Morphalou 2.0 as found here: http://www.cnrtl.fr/lexiques/morphalou/.
+__loadDictionary__ : this function opens and parses a dictionary located at a path defined by the user. The default dictionary is Morphalou 2.0 as found here: http://www.cnrtl.fr/lexiques/morphalou/. **Important**: due to its size, the file dictionnaire.xml containing the Morphalou 2.0 dictionary is not included in this git repository. The user should download it and add it to the same directory as the other files.
 
 __treatMessages__ : takes strings and edits them to make them lowercase, remove contractions, correct some usual spelling errors ("J'ai" becomes "je ai", "acceuil" becomes "accueil", etc.) and split them into individual words. A wider range of spelling mistakes will be taken into account in future versions.
 
