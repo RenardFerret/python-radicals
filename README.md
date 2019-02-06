@@ -3,7 +3,7 @@ This small function allows the user to extract the messages from a forum board (
 
 The current routine is optimized for the *french language*, others may be added in the future. 
 
-__extractMessages__ : this function extract individual messages from a jeuxvideo.com forum board URL (as input by the user).
+__extractMessages__ : this function extract individual messages from a jeuxvideo.com forum board URL (as input by the user). It is not necessary to run extractMessages to perform the analysis. If the user does not wish to run the routine on a jeuxvideo.com URL but on a different list of strings, they can input a filename in __readJson__ containing the list of strings and perform the analysis on the products of this routine.
 
 __writeFile__ : this function takes a list of strings and writes them as a list of strings in a JSON file, whose name and location is defined by the user. It is used both to write the original messages from the forum board and the corrected messages after completion of the analysis.
 
