@@ -1,13 +1,15 @@
 # python-radicals
-This small function allows the user to extract the messages from a forum board (here from jeuxvideo.com, although other sites may be implemented in the future) and reduce each word from each message to its radical. The current routine is optimized for the french language, others may be added. The user can also perform the analysis on any dictionary of strings contained in a JSON file. 
+This small function allows the user to extract the messages from a forum board (here from jeuxvideo.com, although other sites may be implemented in the future) or any list of strings contained in a JSON file, and reduce each word from each message to its radical. The resulting corrected messages are returned in a JSON file.
+
+The current routine is optimized for the *french language*, others may be added in the future. 
 
 __extractMessages__ : this function extract individual messages from a jeuxvideo.com forum board URL (as input by the user).
 
-__writeFile__ : this function takes a list of strings and writes them as a dictionary of strings in a JSON file, whose name and location is defined by the user. It is used both to write the original messages from the forum board and the corrected messages after completion of the analysis.
+__writeFile__ : this function takes a list of strings and writes them as a list of strings in a JSON file, whose name and location is defined by the user. It is used both to write the original messages from the forum board and the corrected messages after completion of the analysis.
 
-__readJSON__ : a simple function that extracts strings from a JSON file containing a dictionary of strings.
+__readJson__ : a simple function that extracts strings from a JSON file containing a list of strings.
 
-__loadDictionary__ : this function opens and parses a dictionary/lexicon located at a path defined by the user. The default dictionary is Morphalou 2.0 as found here: http://www.cnrtl.fr/lexiques/morphalou/ 
+__loadDictionary__ : this function opens and parses a dictionary located at a path defined by the user. The default dictionary is Morphalou 2.0 as found here: http://www.cnrtl.fr/lexiques/morphalou/.
 
 __treatMessages__ : takes strings and edits them to make them lowercase, remove contractions, correct some usual spelling errors ("J'ai" becomes "je ai", "acceuil" becomes "accueil", etc.) and split them into individual words. A wider range of spelling mistakes will be taken into account in future versions.
 
