@@ -1,4 +1,4 @@
-from structure import urlForumBoard
+from message_analysis import urlForumBoard
 
 url       = 'http://www.jeuxvideo.com/forums/42-68-58784902-1-0-1-0-les-temps-changent.htm'
 filename  = 'testMessages.json'
