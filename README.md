@@ -1,1 +1,14 @@
 # python-radicals
+This small function allows the user to extract the messages from a forum board (here from jeuxvideo.com, although other sites may be implemented in the future) and reduce each word from each message to its radical. The current routine is optimized for the french language, others may be added. The user can also perform the analysis on any dictionary of strings contained in a JSON file. 
+
+__extractMessages__ : this function extract individual messages from a jeuxvideo.com forum board URL (as input by the user).
+
+__writeFile__ : this function takes a list of strings and writes them as a dictionary of strings in a JSON file, whose name and location is defined by the user. It is used both to write the original messages from the forum board and the corrected messages after completion of the analysis.
+
+__readJSON__ : a simple function that extracts strings from a JSON file containing a dictionary of strings.
+
+__loadDictionary__ : this function opens and parses a dictionary/lexicon located at a path defined by the user. The default dictionary is Morphalou 2.0 as found here: http://www.cnrtl.fr/lexiques/morphalou/ 
+
+__treatMessages__ : takes strings and edits them to make them lowercase, remove contractions, correct some usual spelling errors ("J'ai" becomes "je ai", "acceuil" becomes "accueil", etc.) and split them into individual words. A wider range of spelling mistakes will be taken into account in future versions.
+
+__replaceMessages__ : compares each word with entries of the dictionary and replaces them with their lemmatized form if applicable (infinitive form of verbs, singular form of nouns, etc.) The words that cannot be found in the dictionary (neologisms, spelling error that have not been accounted for by treatMessages, etc.) are left untouched at the moment. The function returns a list containing each individual message as a string.
